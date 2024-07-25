@@ -16,7 +16,7 @@ const Navbar = () => {
       </div>
     <button className="desktopMenuBtn">
       <img src={contactImg} alt="" class="desktopMenuImg" /> Contact Me </button>
-    </nav>
+    </nav> 
   )
 }
 

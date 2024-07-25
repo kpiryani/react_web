@@ -10,6 +10,7 @@
     position: sticky;
     top: 0;
     z-index: 3;
+    background: rgb(221, 22, 195)
 }
 
 .logo{
@@ -22,6 +23,7 @@
 .desktopMenuListItem {
     margin: 1rem;
     cursor: pointer;
+    color: white;
 
 }
 
@@ -44,9 +46,9 @@
 }
 
 .desktopMenuListItem:hover {
-    color: violet;
+    color: black;
     padding-bottom: 0.5rem;
-    border-bottom: 8px solid violet;
+    border-bottom: 8px solid black;
 
 
 }
