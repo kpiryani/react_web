@@ -1,4 +1,3 @@
-import Header from './Header';
 import Navbar from './components/navbar';
 import './App.css';
 import Intro from './components/intro';
@@ -10,14 +9,15 @@ import Footer from './components/footer';
 function App() {
   return (
     <>
-    <Header/>
     <div className="App">
+    <div className='gradient_background'>
         <Navbar/>
         <Intro/> 
         <Skills/>
         <Works/>
         <Contact/>
         <Footer/>
+    </div>
     </div>
     </>
   );
