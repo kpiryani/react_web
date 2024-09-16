@@ -1,35 +1,39 @@
 #intro {
     height: calc(100vh - 4rem);
     width: 100vw;
-    max-width: 75rem;
+    max-width: 100rem;
+    object-position: 100% center;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Align intro left and bg right */
 }
 
 .bg {
-    position:relative;
+    position: relative;
     z-index: 0;
-    object-fit:cover;
+    object-fit: cover;
+    object-position: 100% center; 
     max-width: 100%;
-    right: 1;
-    height: 65vh;
-    width: 65vh;
+    height: 80vh;
+    width: 40vw; /* Adjust width of the image */
+    margin-left: auto; /* Align image to the right */
+    top: -2rem; /* Move the image slightly up */
 }
 
 .introContent {
     height: 100vh;
-    width: 100vh;
+    width: 45vw; /* Slightly reduce width to help center */
     padding: 2rem;
     font-size: 2rem;
     font-weight: 700;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 1;
-    
-
+    align-items: flex-start; /* Align content slightly towards center */
+    margin-left: auto; /* Center content horizontally */
+    flex: none;
 }
 
 .hello {
@@ -39,39 +43,42 @@
 
 .IntroName {
     color: purple;
-
 }
 
 .introPara {
     font-size: medium;
     font-weight: 300;
     letter-spacing: 1px;
-
 }
 
 .btn {
-    background: lightsalmon;
+    background: silver;
     margin: 1rem 0;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 2rem;
-
+    display: flex;
+    align-items: center; /* Aligns text and image vertically in the button */
 }
 
-.btnImg {
+.btnImg, .gitImg {
     object-fit: cover;
     margin: 0 0.25rem;
-    height: 1rem;
+    height: 1.5rem; /* Increase the height to make the logo bigger */
+    width: auto; /* Maintain aspect ratio */
 }
 
-@media screen and (max-width:840px) {
+@media screen and (max-width: 840px) {
     .bg {
         right: -10vw;
-
+        width: 100vw; /* Adjust for smaller screens */
+        top: 0; /* Reset top for smaller screens */
     }
 
     .introContent {
         font-size: 5vw;
+        width: 100vw; /* Adjust for smaller screens */
+        margin-left: 0;
     }
 
     .hello {
@@ -79,8 +86,10 @@
     }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width: 480px) {
     .bg {
-        right: -20vw
+        right: -20vw;
+        width: 100vw;
+        top: 0; /* Reset top for smaller screens */
     }
 }
