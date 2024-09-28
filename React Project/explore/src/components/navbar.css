@@ -1,7 +1,7 @@
 .navbar{
     height: 5rem;
-    width: 100vw;
-    max-width: 75rem;
+    /* width: 100vw; anything is usually already at 100% witdth*/ 
+    /* max-width: 75rem;  this was your issue with the nav*/
     margin: 0 auto;
     padding: 1rem 2rem;
     display: flex;
@@ -24,7 +24,6 @@
     margin: 1rem;
     cursor: pointer;
     color: white;
-
 }
 
 .desktopMenuBtn {
@@ -34,8 +33,6 @@
     align-items: center;
     padding: 0 1rem;
     border-radius: 2rem;
-
-
 }
 
 .desktopMenuImg {
@@ -49,8 +46,6 @@
     color: black;
     padding-bottom: 0.5rem;
     border-bottom: 8px solid black;
-
-
 }
 
 .active {

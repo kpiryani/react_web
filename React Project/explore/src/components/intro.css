@@ -1,16 +1,22 @@
+
+/* comment styles to see which one you dont need just how I did below */
+
+
+
 #intro {
     height: calc(100vh - 4rem);
-    width: 100vw;
-    max-width: 100rem;
-    object-position: 100% center;
-    margin: 0 auto;
-    overflow: hidden;
+    /* width: 100vw; almost all elements already come with 100% width - Armando*/
+    /* max-width: 100rem; dont need this either - Armando*/
+    /* object-position: 100% center; dont need this - Armando*/
+    /* margin: 0 auto; dont need this - Armando*/
+    /* overflow: hidden; dont need this - Armando */
     display: flex;
     align-items: center;
     justify-content: space-between; /* Align intro left and bg right */
 }
 
 .bg {
+    border-radius: 2rem; /* some nice rounded corners - Armando*/
     position: relative;
     z-index: 0;
     object-fit: cover;
@@ -18,6 +24,7 @@
     max-width: 100%;
     height: 80vh;
     width: 40vw; /* Adjust width of the image */
+    margin-right: auto; /* keeps things nice and even - Armando*/ 
     margin-left: auto; /* Align image to the right */
     top: -2rem; /* Move the image slightly up */
 }
@@ -66,6 +73,7 @@
     margin: 0 0.25rem;
     height: 1.5rem; /* Increase the height to make the logo bigger */
     width: auto; /* Maintain aspect ratio */
+    mix-blend-mode: multiply; /* removes the white background - Armando */
 }
 
 @media screen and (max-width: 840px) {

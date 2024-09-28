@@ -1,30 +1,43 @@
-import React from 'react';
-import './intro.css';
-import bg from '../images/krish face zoo.jpg'
-import btnImg from '../images/linkedin_logo.png'
-import gitImg from '../images/github_logo.png'
-import {Link} from 'react-scroll'
+import React from "react";
+import "./intro.css";
+import bg from "../images/krish face zoo.jpg";
+import btnImg from "../images/linkedin_logo.png";
+import gitImg from "../images/github_logo.png";
+import { Link } from "react-scroll";
 
 const Intro = () => {
   return (
     <section id="intro">
       <div class="introContent">
         <span class="hello">Hello there! </span>
-        <span class="introText">I'm <span class="IntroName">Krish Piryani</span> <br /> </span>
-        <span class="role">And I am a junior at<br/> at NC State University</span>
+        <span class="introText">
+          I'm <span class="IntroName">Krish Piryani</span> <br />{" "}
+        </span>
+        <span class="role">
+          And I am a junior at
+          <br /> at NC State University
+        </span>
         <p class="introPara"> * B. S. Computer Science</p>
         <p class="introPara"> * Email: kopiryan@ncsu.edu</p>
-         <a href="https://www.linkedin.com/in/krish-piryani/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/krish-piryani/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <button class="btn">
-            <img src={btnImg} alt="My LinkedIn!" className='btnImg' /> My LinkedIn!
+            <img src={btnImg} alt="My LinkedIn!" className="btnImg" /> My
+            LinkedIn!
           </button>
         </a>
-        <Link><button class="btn"><img src={gitImg} alt="My Github!" className = 'gitImg' /> My GitHub! </button></Link>
-        
+        <Link>
+          <button class="btn">
+            <img src={gitImg} alt="My Github!" className="gitImg" /> My GitHub!{" "}
+          </button>
+        </Link>
       </div>
       <img src={bg} alt="Profile" class="bg" />
     </section>
-  )
-}
+  );
+};
 
 export default Intro;
