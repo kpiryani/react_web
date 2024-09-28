@@ -8,7 +8,6 @@ const Skills = () => {
   return (
     <section id = 'skills'>
       <span class="skillTitle"> My Internship Experience</span>
-      <span class="skillDescription"> I am a skilled and passionate student with experience in internships and advanced coursework.</span>
       <div class="skillBars"> 
         <div class="skillBar">
           <img src={UIDesign} alt="" class="skillBarImg"></img>
