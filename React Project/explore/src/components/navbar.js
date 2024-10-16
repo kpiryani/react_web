@@ -5,6 +5,11 @@ import contactImg from "../images/black email logo.jpg";
 import menu from "../images/menu.jpg";
 import React, { useState } from "react";
 
+
+
+// Make sure when you add a class to a html element
+//is has to be `className` not `class`
+
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
