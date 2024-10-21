@@ -12,7 +12,7 @@ const AboutMe = () => {
        its role in advancing neuromorphic computing to create systems that mimic human intelligence and adaptability.
       </p>
       <p className="aboutme_description">
-        I have participated 
+        
       </p>
       <p className="aboutme_description">
         Feel free to connect with me on my social media channels or reach out through the contact form!

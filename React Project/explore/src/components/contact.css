@@ -8,7 +8,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 .contactPageTitle {
@@ -38,21 +37,25 @@
     width: 100%;
     max-width: 40rem;
     margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    color: black;
-    border: black;
-    border-color: black;
+    padding: 0.75rem 1rem; /* increased padding for consistency */
+    color: white;
+    border: 1px solid black; /* ensure consistent border styling */
     border-radius: 0.5rem;
     background: rgb(40, 40, 40);
-
 }
 
 .submitBtn {
     background: grey;
-    border: none; 
+    color: white; /* match button text color */
+    border: none;
     padding: 0.75rem 3.5rem;
     border-radius: 0.5rem;
     margin: 2rem;
+    cursor: pointer; /* show clickable cursor */
+}
+
+.submitBtn:hover {
+    background: black; /* add hover effect */
 }
 
 .links {

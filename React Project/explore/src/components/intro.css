@@ -1,55 +1,87 @@
-
-/* comment styles to see which one you dont need just how I did below */
-
-
-
 #intro {
     height: calc(100vh - 4rem);
-    /* width: 100vw; almost all elements already come with 100% width - Armando*/
-    /* max-width: 100rem; dont need this either - Armando*/
-    /* object-position: 100% center; dont need this - Armando*/
-    /* margin: 0 auto; dont need this - Armando*/
-    /* overflow: hidden; dont need this - Armando */
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Align intro left and bg right */
+    justify-content: space-between;
 }
 
 .bg {
-    border-radius: 2rem; /* some nice rounded corners - Armando*/
+    border-radius: 2rem;
     position: relative;
     z-index: 0;
     object-fit: cover;
-    object-position: 100% center; 
+    object-position: 100% center;
     max-width: 100%;
     height: 80vh;
-    width: 40vw; /* Adjust width of the image */
-    margin-right: auto; /* keeps things nice and even - Armando*/ 
-    margin-left: auto; /* Align image to the right */
-    top: -2rem; /* Move the image slightly up */
+    width: 40vw;
+    margin-right: auto;
+    margin-left: auto;
+    top: -2rem;
 }
 
 .introContent {
     height: 100vh;
-    width: 45vw; /* Slightly reduce width to help center */
+    width: 45vw;
     padding: 2rem;
     font-size: 2rem;
     font-weight: 700;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Align content slightly towards center */
-    margin-left: auto; /* Center content horizontally */
+    align-items: flex-start;
+    margin-left: auto;
     flex: none;
+}
+
+/* Typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 12ch; }
+}
+
+@keyframes cursorBlink {
+    0%, 100% {
+        border-right-color: transparent;
+    }
+    50% {
+        border-right-color: black;
+    }
+}
+
+@keyframes cursorDisappear {
+    to {
+        border-right-color: transparent;
+    }
 }
 
 .hello {
     font-size: 1.75rem;
     font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    width: 0;
+    animation: 
+        typing 3s steps(16) 1s forwards,
+        cursorBlink 0.75s step-end 3s;
+    animation-fill-mode: forwards;
+}
+
+.hello::after {
+    content: '';
+    border-right: 2px solid transparent;
+    animation: cursorDisappear 0s 4s forwards;
 }
 
 .IntroName {
     color: purple;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.role {
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .introPara {
@@ -65,27 +97,27 @@
     border: none;
     border-radius: 2rem;
     display: flex;
-    align-items: center; /* Aligns text and image vertically in the button */
+    align-items: center;
 }
 
 .btnImg, .gitImg {
     object-fit: cover;
     margin: 0 0.25rem;
-    height: 1.5rem; /* Increase the height to make the logo bigger */
-    width: auto; /* Maintain aspect ratio */
-    mix-blend-mode: multiply; /* removes the white background - Armando */
+    height: 1.5rem;
+    width: auto;
+    mix-blend-mode: multiply;
 }
 
 @media screen and (max-width: 840px) {
     .bg {
         right: -10vw;
-        width: 100vw; /* Adjust for smaller screens */
-        top: 0; /* Reset top for smaller screens */
+        width: 100vw;
+        top: 0;
     }
 
     .introContent {
         font-size: 5vw;
-        width: 100vw; /* Adjust for smaller screens */
+        width: 100vw;
         margin-left: 0;
     }
 
@@ -98,6 +130,6 @@
     .bg {
         right: -20vw;
         width: 100vw;
-        top: 0; /* Reset top for smaller screens */
+        top: 0;
     }
 }

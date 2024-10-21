@@ -5,16 +5,20 @@ import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_qv3vmsk", "template_uog7il6", form.current, {
-        publicKey: "g0L_vdYXsVRRl9ogwp5To",
-      })
+      .sendForm(
+        "service_qv3vmsk", 
+        "template_uog7il6", 
+        form.current, 
+        "g0L_vdYXsVRRl9ogwp5To"
+      )
       .then(
-        () => {
-          console.log("SUCCESS!");
+        (result) => {
+          console.log("SUCCESS!", result.text);
           e.target.reset();
         },
         (error) => {
@@ -22,7 +26,7 @@ const Contact = () => {
         }
       );
   };
-  
+
   return (
     <section id="contactPage">
       <div id="contact">
@@ -36,24 +40,27 @@ const Contact = () => {
             className="name"
             placeholder="Your Name"
             name="your_name"
+            required
           />
           <input
             type="email"
             className="email"
             placeholder="Your Email"
             name="your_email"
+            required
           />
           <textarea
             className="msg"
             name="message"
             rows="5"
             placeholder="Your Message"
+            required
           ></textarea>
           <button type="submit" value="Send" className="submitBtn">
             Submit
           </button>
-          <div class="links">
-            <img src={LinkedIn} alt="LinkedIn" class="link" />
+          <div className="links">
+            <img src={LinkedIn} alt="LinkedIn" className="link" />
           </div>
         </form>
       </div>

@@ -3,12 +3,13 @@ import "./skills.css";
 import UIDesign from "../images/pnnl.png";
 import WebDesign from "../images/siemens healthineers.jpg";
 import AppDesign from "../images/ncsu_research.png";
+import CycLogo from "../images/cyc_logo.png";
 
 const Skills = () => {
   return (
     <section id="skills">
       <span className="skillTitle"> My Internship Experience</span>
-      <span className="skillDescription">
+      <span className="skillDesc">
         {" "}
         I am a skilled and passionate student with experience in internships and
         advanced coursework.
@@ -33,6 +34,13 @@ const Skills = () => {
           <div className="skillBarText">
             <h2>North Carolina State University Undergraduate Research</h2>
             <p>Research Assistant at AI Assisted Learning Lab</p>
+          </div>
+        </div>
+        <div className="skillBar">
+          <img src={CycLogo} alt="" className="skillBarImg"></img>
+          <div className="skillBarText">
+            <h2>Consult Your Community</h2>
+            <p>Business Analyst</p>
           </div>
         </div>
       </div>

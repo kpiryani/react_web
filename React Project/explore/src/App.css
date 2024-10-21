@@ -1,6 +1,5 @@
 .gradient_background {
-  background: linear-gradient(135deg, #FF5733, #5C0B47, #2E004B);
-
+  background: linear-gradient(135deg, #FF5733, #5C0B47, #7817ee);
   min-height: calc(100vh - [footer_height]);
   width: 100vw;
 }
