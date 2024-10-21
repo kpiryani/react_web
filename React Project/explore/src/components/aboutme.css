@@ -1,0 +1,23 @@
+.aboutme_container {
+    color: black; /* Keep text color white for contrast */
+    padding: 2rem;
+    min-height: calc(100vh - 60px); /* Adjust based on your footer height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.aboutme_title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.aboutme_description {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    max-width: 800px; /* Control width for better readability */
+    line-height: 1.5;
+}

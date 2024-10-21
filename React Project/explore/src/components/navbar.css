@@ -1,7 +1,5 @@
-.navbar{
+.navbar {
     height: 5rem;
-    /* width: 100vw; anything is usually already at 100% witdth*/ 
-    /* max-width: 75rem;  this was your issue with the nav*/
     margin: 0 auto;
     padding: 1rem 2rem;
     display: flex;
@@ -10,8 +8,9 @@
     position: sticky;
     top: 0;
     z-index: 3;
-    background: rgb(221, 22, 195)
-}
+    background: linear-gradient(135deg, #5C0B47, #3A0832, #2E004B);
+  }
+  
 
 .logo{
     object-fit: cover;
@@ -27,7 +26,7 @@
 }
 
 .desktopMenuBtn {
-    background: black;
+    background: #FF5733;
     color: white;
     border: none;
     align-items: center;
@@ -43,15 +42,15 @@
 }
 
 .desktopMenuListItem:hover {
-    color: black;
+    color: #FF5733;
     padding-bottom: 0.5rem;
-    border-bottom: 8px solid black;
+    border-bottom: 8px solid #FF5733;
 }
 
 .active {
-    color: black;
+    color: magenta;
     padding-bottom: 0.5rem;
-    border-bottom: 8px solid black;
+    border-bottom: 8px solid magenta;
 }
 
 .navMenu {

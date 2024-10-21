@@ -5,6 +5,7 @@ import Skills from "./components/skills";
 import Works from "./components/works";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
+import AboutMe from "./components/aboutme"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <div className="gradient_background">
           <Navbar />
           <Intro />
+          <AboutMe />
           <Skills />
           <Works />
           <Contact />

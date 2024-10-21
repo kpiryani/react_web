@@ -3,7 +3,6 @@ import "./intro.css";
 import bg from "../images/krish face zoo.jpg";
 import btnImg from "../images/linkedin_logo.png";
 import gitImg from "../images/github_logo.png";
-import { Link } from "react-scroll";
 
 const Intro = () => {
   return (
@@ -29,11 +28,15 @@ const Intro = () => {
             LinkedIn!
           </button>
         </a>
-        <Link>
+        <a
+          href="https://github.com/kpiryani"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <button class="btn">
-            <img src={gitImg} alt="My Github!" className="gitImg" /> My GitHub!{" "}
+            <img src={gitImg} alt="My GitHub!" className="gitImg" /> My GitHub!!
           </button>
-        </Link>
+        </a>
       </div>
       <img src={bg} alt="Profile" class="bg" />
     </section>
