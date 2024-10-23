@@ -1,12 +1,22 @@
 .aboutme_container {
-    color: black; /* Keep text color white for contrast */
+    color: white;
     padding: 2rem;
-    min-height: calc(100vh - 60px); /* Adjust based on your footer height */
+    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.aboutme_title, .aboutme_description {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in; /* Smooth transition effect */
+}
+
+/* This class will be added when the element is in view */
+.fade-in {
+    opacity: 1; /* Fade in when class is added */
 }
 
 .aboutme_title {
@@ -18,6 +28,6 @@
 .aboutme_description {
     font-size: 1.2rem;
     margin: 0.5rem 0;
-    max-width: 800px; /* Control width for better readability */
+    max-width: 800px;
     line-height: 1.5;
 }

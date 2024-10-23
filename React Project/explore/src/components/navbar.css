@@ -9,20 +9,24 @@
     top: 0;
     z-index: 3;
     background: linear-gradient(135deg, #5C0B47, #3A0832, #2E004B);
-  }
-  
+    opacity: 0; /* Start with navbar hidden */
+    transition: opacity 0.5s ease; /* Adjust timing for the fade-in effect */
+}
 
-.logo{
+.navbar.fade-in {
+    opacity: 1; /* Fade in effect applied when fadeIn is true */
+}
+
+.logo {
     object-fit: cover;
     height: 3rem;
     width: 4rem;
-
 }
 
 .logo:hover {
     transform: scale(1.1);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
+}
 
 .desktopMenuListItem {
     margin: 1rem;
@@ -43,13 +47,12 @@
     background-color: white;
     transform: scale(1.1);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
+}
 
 .desktopMenuImg {
     object-fit: cover;
     height: 1rem;
     width: 1rem;
-
 }
 
 .desktopMenuListItem:hover {
@@ -103,4 +106,3 @@
         display: none;
     }
 }
-

@@ -3,18 +3,23 @@ import logo from "../images/k.jpg";
 import { Link } from "react-scroll";
 import contactImg from "../images/black email logo.jpg";
 import menu from "../images/menu.jpg";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-
-
-// Make sure when you add a class to a html element
-//is has to be `className` not `class`
-
+// Navbar component definition
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false); // State to manage mobile menu visibility
+  const [fadeIn, setFadeIn] = useState(false); // State to manage fade-in effect
+
+  // useEffect to trigger fade-in effect on component mount
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFadeIn(true); // Set fadeIn to true after 100ms to apply the fade-in class
+    }, 100); // Adjust duration as needed
+    return () => clearTimeout(timer); // Clean up the timer on component unmount
+  }, []);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${fadeIn ? 'fade-in' : ''}`}> {/* Apply fade-in class based on state */}
       <Link to="intro" spy={true} smooth={true} offset={-200} duration={500}>
         <img src={logo} alt="Logo" className="logo" />
       </Link>
