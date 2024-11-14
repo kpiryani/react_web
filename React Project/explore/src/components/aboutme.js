@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import bg from "../images/neuromorphic_computing.jpeg";
 import './aboutme.css';
 
 const AboutMe = () => {
@@ -51,7 +52,9 @@ const AboutMe = () => {
       <p className="aboutme_description" ref={addToDescriptionRefs}>
         I am currently seeking internship opportunities for the summer of 2025!
       </p>
+      <img src={bg} alt="Neuro" class="bg" />
     </div>
+    
   );
 };
 

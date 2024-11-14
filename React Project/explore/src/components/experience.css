@@ -1,0 +1,81 @@
+#experience {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.experienceTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.experienceDesc {
+    font-weight: 300;
+    font-size: 0.9rem;
+    max-width: 50rem;
+    padding: 0 2rem;
+    color: white;
+}
+
+.experienceBars {
+    margin: 1.5rem;
+    width: 100vw;
+    max-width: 80%;
+    text-align: left;
+}
+
+.experienceBar {
+    display: flex;
+    margin: 0.5rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: black;
+}
+
+.experienceBarImg {
+    object-fit: cover;
+    height: 10rem;
+    width: 22rem;
+    margin-right: 2.5rem;
+}   
+
+.experienceBarText>h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+
+.experienceBarText>p {
+    font-size: 1rem;
+    font-weight: 200;
+    color: white;
+}
+
+
+
+@media screen and (max-width:720px) {
+    .experienceBarText>p {
+        font-size: 3vw;
+
+    }
+
+    .experienceBarImg {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    .experienceBarText>h2 {
+        font-size: 5vw;
+    }
+}

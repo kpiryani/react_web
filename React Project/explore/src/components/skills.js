@@ -1,46 +1,47 @@
 import React from "react";
 import "./skills.css";
-import UIDesign from "../images/pnnl.png";
-import WebDesign from "../images/siemens healthineers.jpg";
-import AppDesign from "../images/ncsu_research.png";
-import CycLogo from "../images/cyc_logo.png";
+import JavaLogo from "../images/java logo.jpg";
+import PythonLogo from "../images/python logo.webp";
+import LlamaLogo from "../images/llama_logo.jpg";
+import ReactLogo from "../images/react_logo.png";
+import HuggingLogo from "../images/huggingface_logo.png";
 
 const Skills = () => {
   return (
     <section id="skills">
-      <span className="skillTitle"> My Internship Experience</span>
+      <span className="skillTitle">Skills</span>
       <span className="skillDesc">
-        {" "}
-        I am a skilled and passionate student with experience in internships and
-        advanced coursework.
+        These are some of the skills I specialize most in.
       </span>
       <div className="skillBars">
         <div className="skillBar">
-          <img src={UIDesign} alt="" className="skillBarImg"></img>
+          <img src={JavaLogo} alt="" className="skillBarImg" />
           <div className="skillBarText">
-            <h2>Pacific Northwest National Laboratory</h2>
-            <p>AI Research Intern</p>
+            <h2>Java Programming</h2>
           </div>
         </div>
         <div className="skillBar">
-          <img src={WebDesign} alt="" className="skillBarImg"></img>
+          <img src={PythonLogo} alt="" className="skillBarImg" />
           <div className="skillBarText">
-            <h2>Siemens Healthineers</h2>
-            <p>Data Analytics Intern</p>
+            <h2>Python Programming</h2>
           </div>
         </div>
         <div className="skillBar">
-          <img src={AppDesign} alt="" className="skillBarImg"></img>
+          <img src={LlamaLogo} alt="" className="skillBarImg" />
           <div className="skillBarText">
-            <h2>North Carolina State University Undergraduate Research</h2>
-            <p>Research Assistant at AI Assisted Learning Lab</p>
+            <h2>LlamaIndex</h2>
           </div>
         </div>
         <div className="skillBar">
-          <img src={CycLogo} alt="" className="skillBarImg"></img>
+          <img src={ReactLogo} alt="" className="skillBarImg" />
           <div className="skillBarText">
-            <h2>Consult Your Community</h2>
-            <p>Business Analyst</p>
+            <h2>React.js</h2>
+          </div>
+        </div>
+        <div className="skillBar">
+          <img src={HuggingLogo} alt="" className="skillBarImg" />
+          <div className="skillBarText">
+            <h2>HuggingFace</h2>
           </div>
         </div>
       </div>

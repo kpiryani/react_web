@@ -1,11 +1,12 @@
 import Navbar from "./components/navbar";
 import "./App.css";
 import Intro from "./components/intro";
-import Skills from "./components/skills";
+import Experience from "./components/experience";
 import Works from "./components/works";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 import AboutMe from "./components/aboutme"
+import Skills from "./components/skills"
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
           <Navbar />
           <Intro />
           <AboutMe />
-          <Skills />
+          <Experience />
           <Works />
+          <Skills />
           <Contact />
           <Footer />
         </div>

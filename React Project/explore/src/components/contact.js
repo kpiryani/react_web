@@ -32,7 +32,7 @@ const Contact = () => {
       <div id="contact">
         <h1 className="contactPageTitle">Contact Me</h1>
         <span className="contactDesc">
-          Please reach out to me if you have any questions!
+          What's holding you back? Please reach out to me if you have any questions!
         </span>
         <form className="contactForm" ref={form} onSubmit={sendEmail}>
           <input
