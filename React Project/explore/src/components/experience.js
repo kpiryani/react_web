@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./experience.css";
 import UIDesign from "../images/pnnl.png";
 import WebDesign from "../images/siemens healthineers.jpg";
@@ -6,11 +6,34 @@ import AppDesign from "../images/ncsu_research.png";
 import CycLogo from "../images/cyc_logo.png";
 
 const Experience = () => {
+  const experienceRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const bars = experienceRef.current.querySelectorAll(".experienceBar");
+    bars.forEach((bar) => observer.observe(bar));
+
+    return () => {
+      bars.forEach((bar) => observer.unobserve(bar));
+    };
+  }, []);
+
   return (
-    <section id="experience">
+    <section id="experience" ref={experienceRef}>
       <span className="experienceTitle"> My Internship Experience</span>
       <span className="experienceDesc">
-        {" "}
         I am a skilled and passionate student with experience in internships and
         advanced coursework.
       </span>
@@ -40,7 +63,7 @@ const Experience = () => {
           <img src={CycLogo} alt="" className="experienceBarImg"></img>
           <div className="experienceBarText">
             <h2>Consult Your Community</h2>
-            <p>Business Analyst</p>
+            <p>Engagement Manager</p>
           </div>
         </div>
       </div>

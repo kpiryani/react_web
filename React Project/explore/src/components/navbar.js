@@ -5,7 +5,6 @@ import contactImg from "../images/black email logo.jpg";
 import menu from "../images/menu.jpg";
 import React, { useState, useEffect } from "react";
 
-// Navbar component definition
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false); // State to manage mobile menu visibility
   const [fadeIn, setFadeIn] = useState(false); // State to manage fade-in effect
@@ -38,10 +37,10 @@ const Navbar = () => {
         </Link>
         <Link
           activeClass="active"
-          to="skills"
+          to="aboutme_title"
           spy={true}
           smooth={true}
-          offset={-100}
+          offset={-150}
           duration={500}
           className="desktopMenuListItem"
         >
@@ -49,25 +48,25 @@ const Navbar = () => {
         </Link>
         <Link
           activeClass="active"
-          to="works"
+          to="experienceTitle"
           spy={true}
           smooth={true}
-          offset={-50}
-          duration={500}
-          className="desktopMenuListItem"
-        >
-          Portfolio
-        </Link>
-        <Link
-          activeClass="active"
-          to="contact"
-          spy={true}
-          smooth={true}
-          offset={-100}
+          offset={0}
           duration={500}
           className="desktopMenuListItem"
         >
           Experience
+        </Link>
+        <Link
+          activeClass="active"
+          to="skills"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          className="desktopMenuListItem"
+        >
+          Skills
         </Link>
       </div>
 
@@ -103,10 +102,10 @@ const Navbar = () => {
         </Link>
         <Link
           activeClass="active"
-          to="skills"
+          to="aboutme"
           spy={true}
           smooth={true}
-          offset={-100}
+          offset={-150} 
           duration={500}
           className="listItem"
           onClick={() => setShowMenu(false)}
@@ -115,27 +114,27 @@ const Navbar = () => {
         </Link>
         <Link
           activeClass="active"
-          to="works"
+          to="experience"
           spy={true}
           smooth={true}
-          offset={-50}
-          duration={500}
-          className="listItem"
-          onClick={() => setShowMenu(false)}
-        >
-          Portfolio
-        </Link>
-        <Link
-          activeClass="active"
-          to="contact"
-          spy={true}
-          smooth={true}
-          offset={-100}
+          offset={-150} // Adjusted offset for "Experience"
           duration={500}
           className="listItem"
           onClick={() => setShowMenu(false)}
         >
           Experience
+        </Link>
+        <Link
+          activeClass="active"
+          to="skills"
+          spy={true}
+          smooth={true}
+          offset={-150} // Adjusted offset for "Skills"
+          duration={500}
+          className="listItem"
+          onClick={() => setShowMenu(false)}
+        >
+          Skills
         </Link>
         <Link
           activeClass="active"

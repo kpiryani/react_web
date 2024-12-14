@@ -1,30 +1,39 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import LinkedIn from "../images/linkedin_logo.png";
 import "./contact.css";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
+  const [isSending, setIsSending] = useState(false);
 
   const sendEmail = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission
+    setIsSending(true); // Indicate the email is being sent
 
     emailjs
       .sendForm(
-        "service_qv3vmsk", 
-        "template_uog7il6", 
-        form.current, 
-        "g0L_vdYXsVRRl9ogwp5To"
+        "service_qv3vmsk", // EmailJS service ID
+        "template_uog7il6", // EmailJS template ID
+        form.current, // Reference to the form
+        "g0L_vdYXsVRRl9ogwp5To" // Public key
       )
       .then(
         (result) => {
           console.log("SUCCESS!", result.text);
-          e.target.reset();
+          alert("Your email has been sent successfully!");
+          e.target.reset(); // Reset form fields
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          console.error("FAILED...", error.text);
+          alert(
+            "There was an issue sending your email. Please try again later."
+          );
         }
-      );
+      )
+      .finally(() => {
+        setIsSending(false); // Reset sending state
+      });
   };
 
   return (
@@ -56,11 +65,17 @@ const Contact = () => {
             placeholder="Your Message"
             required
           ></textarea>
-          <button type="submit" value="Send" className="submitBtn">
-            Submit
+          <button type="submit" className="submitBtn" disabled={isSending}>
+            {isSending ? "Sending..." : "Submit"}
           </button>
           <div className="links">
-            <img src={LinkedIn} alt="LinkedIn" className="link" />
+            <a
+              href="https://www.linkedin.com/in/your-profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={LinkedIn} alt="LinkedIn" className="link" />
+            </a>
           </div>
         </form>
       </div>

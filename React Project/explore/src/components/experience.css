@@ -40,6 +40,9 @@
     padding: 1.5rem;
     border-radius: 0.5rem;
     background: black;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .experienceBarImg {
@@ -48,6 +51,12 @@
     width: 22rem;
     margin-right: 2.5rem;
 }   
+  
+  .experienceBar.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
 
 .experienceBarText>h2 {
     font-size: 1.5rem;

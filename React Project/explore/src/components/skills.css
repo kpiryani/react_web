@@ -63,6 +63,17 @@
   text-align: center;
 }
 
+.skillBar {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.skillBar.show {
+  opacity: 1;
+}
+
+
+
 @media screen and (max-width: 720px) {
   .skillBarImg {
     width: 4rem;
