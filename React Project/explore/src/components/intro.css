@@ -36,7 +36,7 @@
 /* Typing effect */
 @keyframes typing {
     from { width: 0; }
-    to { width: 12ch; }
+    to { width: 12ch; } /* Adjusted for "Hello There!" length */
 }
 
 @keyframes cursorBlink {
@@ -62,21 +62,33 @@
     border-right: 2px solid;
     width: 0;
     animation: 
-        typing 3s steps(16) 1s forwards,
-        cursorBlink 0.75s step-end 3s;
+        typing 2s steps(16) 1s forwards, /* Typing for 2s, with 1s delay */
+        cursorBlink 0.75s step-end 2s;    /* Cursor blinking stops after typing */
     animation-fill-mode: forwards;
 }
 
 .hello::after {
     content: '';
     border-right: 2px solid transparent;
-    animation: cursorDisappear 0s 4s forwards;
+    animation: cursorDisappear 0s 2s forwards;
 }
 
 .IntroName {
     color: purple;
     white-space: nowrap;
     overflow: hidden;
+    border-right: 2px solid;
+    width: 0;
+    animation: 
+        typing 2s steps(16) 5s forwards, /* Starts typing 5s after "Hello There!" */
+        cursorBlink 0.75s step-end 2s;
+    animation-fill-mode: forwards;
+}
+
+.IntroName::after {
+    content: '';
+    border-right: 2px solid transparent;
+    animation: cursorDisappear 0s 2s forwards;
 }
 
 .role {
@@ -107,6 +119,12 @@
     width: auto;
     mix-blend-mode: multiply;
 }
+
+.btn:hover {
+    background-color: white;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
 
 @media screen and (max-width: 840px) {
     .bg {

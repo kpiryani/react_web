@@ -34,7 +34,7 @@ const Intro = () => {
           rel="noopener noreferrer"
         >
           <button class="btn">
-            <img src={gitImg} alt="My GitHub!" className="gitImg" /> My GitHub!!
+            <img src={gitImg} alt="My GitHub!" className="gitImg" /> My GitHub!
           </button>
         </a>
       </div>
