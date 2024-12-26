@@ -16,7 +16,7 @@ const Contact = () => {
         "service_qv3vmsk", // EmailJS service ID
         "template_uog7il6", // EmailJS template ID
         form.current, // Reference to the form
-        "g0L_vdYXsVRRl9ogwp5To" // Public key
+        "PovihQqLJt-AA3aB9" // Public key
       )
       .then(
         (result) => {
