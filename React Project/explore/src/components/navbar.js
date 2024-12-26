@@ -6,15 +6,14 @@ import menu from "../images/menu.jpg";
 import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false); // State to manage mobile menu visibility
-  const [fadeIn, setFadeIn] = useState(false); // State to manage fade-in effect
+  const [showMenu, setShowMenu] = useState(false); 
+  const [fadeIn, setFadeIn] = useState(false); 
 
-  // useEffect to trigger fade-in effect on component mount
   useEffect(() => {
     const timer = setTimeout(() => {
-      setFadeIn(true); // Set fadeIn to true after 100ms to apply the fade-in class
-    }, 100); // Adjust duration as needed
-    return () => clearTimeout(timer); // Clean up the timer on component unmount
+      setFadeIn(true); 
+    }, 100); 
+    return () => clearTimeout(timer); 
   }, []);
 
   return (
@@ -117,7 +116,7 @@ const Navbar = () => {
           to="experience"
           spy={true}
           smooth={true}
-          offset={-150} // Adjusted offset for "Experience"
+          offset={-150} 
           duration={500}
           className="listItem"
           onClick={() => setShowMenu(false)}
@@ -129,7 +128,7 @@ const Navbar = () => {
           to="skills"
           spy={true}
           smooth={true}
-          offset={-150} // Adjusted offset for "Skills"
+          offset={-150} 
           duration={500}
           className="listItem"
           onClick={() => setShowMenu(false)}
