@@ -8,7 +8,6 @@
     justify-content: center;
     text-align: center;
     margin: 0 auto;
-
 }
 
 .experienceTitle {
@@ -16,14 +15,6 @@
     font-weight: 600;
     padding-top: 1rem;
     margin-bottom: 1rem;
-    color: white;
-}
-
-.experienceDesc {
-    font-weight: 300;
-    font-size: 0.9rem;
-    max-width: 50rem;
-    padding: 0 2rem;
     color: white;
 }
 
@@ -52,11 +43,10 @@
     margin-right: 2.5rem;
 }   
   
-  .experienceBar.show {
+.experienceBar.show {
     opacity: 1;
     transform: translateX(0);
-  }
-  
+}
 
 .experienceBarText>h2 {
     font-size: 1.5rem;
@@ -64,19 +54,44 @@
     color: white;
 }
 
+.experienceRole {
+    font-weight: 600;
+    color: white;
+}
 
-.experienceBarText>p {
-    font-size: 1rem;
+.experienceDescription {
     font-weight: 200;
     color: white;
 }
 
+/* Added styles for PNNL-specific elements */
+.abstractInfo {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #cccccc;
+}
 
+.abstractLink {
+    margin-top: 0.5rem;
+}
+
+.abstractLink button {
+    padding: 0.5rem 1rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.abstractLink button:hover {
+    background-color: #357abd;
+}
 
 @media screen and (max-width:720px) {
     .experienceBarText>p {
         font-size: 3vw;
-
     }
 
     .experienceBarImg {

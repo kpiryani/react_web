@@ -33,37 +33,48 @@ const Experience = () => {
   return (
     <section id="experience" ref={experienceRef}>
       <span className="experienceTitle"> My Internship Experience</span>
-      <span className="experienceDesc">
-        I am a skilled and passionate student with experience in internships and
-        advanced coursework.
-      </span>
       <div className="experienceBars">
+        {/* Modified PNNL experience to match other experiences */}
         <div className="experienceBar">
           <img src={UIDesign} alt="" className="experienceBarImg"></img>
           <div className="experienceBarText">
             <h2>Pacific Northwest National Laboratory</h2>
-            <p>AI Research Intern</p>
+            <p className="experienceRole">AI Research Intern</p>
+            <p className="experienceDescription">
+            Enhanced a RAG-based system by designing one-to-one mappings between MITRE's CVE, CWE, CAPEC, and ATT&CK frameworks with LlamaIndex.
+            </p>
+            <p className="abstractInfo">
+              Check out the abstract for the project I worked on!
+            </p>
+            <div className="abstractLink">
+              <button onClick={() => window.open('https://www.pnnl.gov/publications/retrieval-augmented-generation-robust-cyber-defense', '_blank')}>
+                View Abstract
+              </button>
+            </div>
           </div>
         </div>
         <div className="experienceBar">
           <img src={WebDesign} alt="" className="experienceBarImg"></img>
           <div className="experienceBarText">
             <h2>Siemens Healthineers</h2>
-            <p>Data Analytics Intern</p>
+            <p className="experienceRole">Data Analytics Intern</p>
+            <p className="experienceDescription">
+            Enhanced a RAG-based system by designing one-to-one mappings between MITRE's CVE, CWE, CAPEC, and ATT&CK frameworks with LlamaIndex.
+            </p>
           </div>
         </div>
         <div className="experienceBar">
           <img src={AppDesign} alt="" className="experienceBarImg"></img>
           <div className="experienceBarText">
             <h2>North Carolina State University Undergraduate Research</h2>
-            <p>Research Assistant at AI Assisted Learning Lab</p>
+            <p className="experienceRole">Research Assistant at AI Assisted Learning Lab</p>
           </div>
         </div>
         <div className="experienceBar">
           <img src={CycLogo} alt="" className="experienceBarImg"></img>
           <div className="experienceBarText">
             <h2>Consult Your Community</h2>
-            <p>Engagement Manager</p>
+            <p className="experienceRole">Engagement Manager</p>
           </div>
         </div>
       </div>

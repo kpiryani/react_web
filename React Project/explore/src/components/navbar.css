@@ -59,9 +59,9 @@
 }
 
 .desktopMenuListItem:hover {
-    color: #FF5733;
+    color: navy;
     padding-bottom: 0.5rem;
-    border-bottom: 8px solid #FF5733;
+    border-bottom: 8px solid navy;
 }
 
 .active {

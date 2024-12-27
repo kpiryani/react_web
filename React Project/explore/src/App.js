@@ -15,9 +15,9 @@ function App() {
         <div className="gradient_background">
           <Navbar />
           <Intro />
-          <AboutMe />
+          <Skills /> 
           <Experience />
-          <Skills />
+          <AboutMe />
           <Contact />
           <Footer />
         </div>
