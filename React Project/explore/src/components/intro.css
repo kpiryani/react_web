@@ -3,6 +3,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#intro.fade-in {
+    opacity: 1;
 }
 
 .bg {
@@ -31,12 +37,13 @@
     align-items: flex-start;
     margin-left: auto;
     flex: none;
+    color: white;
 }
 
 /* Typing effect */
 @keyframes typing {
     from { width: 0; }
-    to { width: 12ch; } /* Adjusted for "Hello There!" length */
+    to { width: 12ch; }
 }
 
 @keyframes cursorBlink {
@@ -62,8 +69,8 @@
     border-right: 2px solid;
     width: 0;
     animation: 
-        typing 2s steps(16) 1s forwards, /* Typing for 2s, with 1s delay */
-        cursorBlink 0.75s step-end 2s;    /* Cursor blinking stops after typing */
+        typing 2s steps(16) 1s forwards,
+        cursorBlink 0.75s step-end 2s;
     animation-fill-mode: forwards;
 }
 
@@ -74,21 +81,15 @@
 }
 
 .IntroName {
-    color: purple;
+    color: gold;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;
     width: 0;
     animation: 
-        typing 2s steps(16) 5s forwards, /* Starts typing 5s after "Hello There!" */
-        cursorBlink 0.75s step-end 2s;
+        typing 0s steps(16) 0s forwards,
+        cursorBlink 0.0s step-end 0s;
     animation-fill-mode: forwards;
-}
-
-.IntroName::after {
-    content: '';
-    border-right: 2px solid transparent;
-    animation: cursorDisappear 0s 2s forwards;
 }
 
 .role {
@@ -124,7 +125,7 @@
     background-color: white;
     transform: scale(1.1);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
+}
 
 @media screen and (max-width: 840px) {
     .bg {
@@ -150,4 +151,29 @@
         width: 100vw;
         top: 0;
     }
+}
+
+.waving-hand {
+    display: inline-block;
+    animation: wave 2.5s infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }
+    100% { transform: rotate( 0.0deg) }
+}
+
+.ncsuLogo {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    margin-left: 5px;
+    vertical-align: middle;
 }
