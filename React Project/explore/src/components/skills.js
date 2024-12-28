@@ -10,6 +10,9 @@ import SQLLogo from "../images/sql_logo.png";
 import PyTorchLogo from "../images/pytorch_logo.png";
 import StreamLitLogo from "../images/streamlit_logo.jpg";
 import CelonisLogo from "../images/celonis_logo.jpg";
+import '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode, faDatabase, faRobot } from '@fortawesome/free-solid-svg-icons';
 
 const Skills = () => {
   const skillsRef = useRef(null);
@@ -25,22 +28,51 @@ const Skills = () => {
           }
         });
       },
-      { threshold: 0.1 } // Adjust to trigger when 10% of the element is visible
+      { threshold: 0.1 }
     );
+
+    const skillBoxes = skillsRef.current.querySelectorAll(".skill-box");
+    skillBoxes.forEach((box) => observer.observe(box));
 
     const skillBars = skillsRef.current.querySelectorAll(".skillBar");
     skillBars.forEach((bar) => observer.observe(bar));
 
     return () => {
+      skillBoxes.forEach((box) => observer.unobserve(box));
       skillBars.forEach((bar) => observer.unobserve(bar));
     };
   }, []);
 
   return (
     <section id="skills" ref={skillsRef}>
-      <span className="skillTitle">Skills</span>
+      <span className="skillTitle">My Expertise</span>
+      
+      <div className="skills-grid">
+        <div className="skill-box">
+          <FontAwesomeIcon icon={faCode} size="3x" className="skill-icon"/>
+          <div className="skill-content">
+            <h3>Software Development</h3>
+            <p>Proficient in Java, Python, and C/C++ for building robust and efficient software solutions.</p>
+          </div>
+        </div>
+        <div className="skill-box">
+          <FontAwesomeIcon icon={faRobot} size="3x" className="skill-icon"/>
+          <div className="skill-content">
+            <h3>Artificial Intelligence</h3>
+            <p>Experienced in AI research and enhancing/deploying ML models using LlamaIndex, Langchain, and HuggingFace frameworks.</p>
+          </div>
+        </div>
+        <div className="skill-box">
+          <FontAwesomeIcon icon={faDatabase} size="3x" className="skill-icon"/>
+          <div className="skill-content">
+            <h3>Data Analysis</h3>
+            <p>Skilled in data extraction, analysis, and visualization using SQL, MongoDB, and Power BI.</p>
+          </div>
+        </div>
+      </div>
+
       <span className="skillDesc">
-        These are some of the skills I specialize most in.
+        Some tools and technologies I specialize in!
       </span>
       <div className="skillBars">
         <div className="skillBar">

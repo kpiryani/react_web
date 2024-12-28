@@ -2,7 +2,6 @@ import Navbar from "./components/navbar";
 import "./App.css";
 import Intro from "./components/intro";
 import Experience from "./components/experience";
-// import Works from "./components/works";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 import AboutMe from "./components/aboutme"
@@ -12,12 +11,22 @@ function App() {
   return (
     <>
       <div className="App">
-        <div className="gradient_background">
+        
+        {/* Added a separate container for the animated background */}
+        <div className="background-container">
+          <div className="lines">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+          </div>
+        </div>
+        {/* Kept the original content structure */}
+        <div className="content">
           <Navbar />
           <Intro />
-          <AboutMe />
+          <Skills /> 
           <Experience />
-          <Skills />
+          <AboutMe />
           <Contact />
           <Footer />
         </div>

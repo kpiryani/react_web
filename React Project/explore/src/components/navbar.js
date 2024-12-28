@@ -36,14 +36,14 @@ const Navbar = () => {
         </Link>
         <Link
           activeClass="active"
-          to="aboutme_title"
+          to="skills"
           spy={true}
           smooth={true}
-          offset={-150}
+          offset={0}
           duration={500}
           className="desktopMenuListItem"
         >
-          About Me
+          Skills
         </Link>
         <Link
           activeClass="active"
@@ -58,14 +58,14 @@ const Navbar = () => {
         </Link>
         <Link
           activeClass="active"
-          to="skills"
+          to="aboutme_title"
           spy={true}
           smooth={true}
-          offset={0}
+          offset={-150}
           duration={500}
           className="desktopMenuListItem"
         >
-          Skills
+          About Me
         </Link>
       </div>
 
