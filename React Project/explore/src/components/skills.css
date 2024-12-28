@@ -1,7 +1,7 @@
 #skills {
   overflow: hidden;
   width: 100vw;
-  max-width: 65rem;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,15 +27,69 @@
   margin-bottom: 2rem;
 }
 
+/* Updated styles for skills-grid (oval boxes in a row) */
+.skills-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  max-width: 80%;
+  margin-bottom: 2rem;
+}
+
+.skill-box {
+  background-color: #000000;
+  border-radius: 50px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  width: calc(33.33% - 1rem);
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+.skill-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-icon {
+  color: white;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.skill-content {
+  text-align: left;
+}
+
+.skill-box h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #AE8F00;
+}
+
+.skill-box p {
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
 /* Single rectangle background for all skills */
 .skillBars {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   gap: 1.5rem;
   width: 100%;
-  max-width: 80%;
+  max-width: 50%;
   padding: 2rem;
-  background-color: #1a1a1a; /* Dark background for rectangle */
+  background-color: #1a1a1a;
   border-radius: 1rem;
   justify-items: center;
 }
@@ -45,6 +99,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.skillBar.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .skillBarImg {
@@ -53,7 +115,7 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 0.5rem;
-  border: 2px solid #333; /* Optional border for style */
+  border: 2px solid #333;
 }
 
 .skillBarText > h2 {
@@ -63,18 +125,11 @@
   text-align: center;
 }
 
-.skillBar {
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-
-.skillBar.show {
-  opacity: 1;
-}
-
-
-
 @media screen and (max-width: 720px) {
+  .skill-box {
+    width: 100%;
+  }
+
   .skillBarImg {
     width: 4rem;
     height: 4rem;
