@@ -1,11 +1,22 @@
 .footer {
-    width: 100vw;
-    height: 4rem;
     background: rgb(40, 40, 40);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    font-size: small; 
+    line-height: 1.6; 
     font-weight: 300;
-    font-size: small;
-}
+  }
+
+  .vscode-link {
+    color: #AE8F00;
+  }
+  
+  .react-link {
+    color: #AE8F00;
+  }
+  
+  .github-link {
+    color: #AE8F00;
+  }
+  

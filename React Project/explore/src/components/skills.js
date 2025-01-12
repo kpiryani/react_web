@@ -45,27 +45,27 @@ const Skills = () => {
 
   return (
     <section id="skills" ref={skillsRef}>
-      <span className="skillTitle">My Expertise</span>
+      <span className="skillTitle">My Areas of Expertise</span>
       
       <div className="skills-grid">
         <div className="skill-box">
           <FontAwesomeIcon icon={faCode} size="3x" className="skill-icon"/>
           <div className="skill-content">
-            <h3>Software Development</h3>
+            <h3>Agile Software Development</h3>
             <p>Proficient in Java, Python, and C/C++ for building robust and efficient software solutions.</p>
           </div>
         </div>
         <div className="skill-box">
           <FontAwesomeIcon icon={faRobot} size="3x" className="skill-icon"/>
           <div className="skill-content">
-            <h3>Artificial Intelligence</h3>
-            <p>Experienced in AI research and enhancing/deploying ML models using LlamaIndex, Langchain, and HuggingFace frameworks.</p>
+            <h3>ML Research and Deployment</h3>
+            <p>Experienced in AI/ML research and enhancing/deploying ML models using LlamaIndex, Langchain, and HuggingFace frameworks.</p>
           </div>
         </div>
         <div className="skill-box">
           <FontAwesomeIcon icon={faDatabase} size="3x" className="skill-icon"/>
           <div className="skill-content">
-            <h3>Data Analysis</h3>
+            <h3>Data Mining and Modeling</h3>
             <p>Skilled in data extraction, analysis, and visualization using SQL, MongoDB, and Power BI.</p>
           </div>
         </div>

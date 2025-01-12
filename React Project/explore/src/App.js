@@ -6,6 +6,7 @@ import Contact from "./components/contact";
 import Footer from "./components/footer";
 import AboutMe from "./components/aboutme"
 import Skills from "./components/skills"
+import Projects from "./components/projects"
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Intro />
           <Skills /> 
           <Experience />
+          <Projects/>
           <AboutMe />
           <Contact />
           <Footer />
@@ -36,3 +38,4 @@ function App() {
 }
 
 export default App;
+

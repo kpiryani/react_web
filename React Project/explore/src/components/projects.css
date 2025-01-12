@@ -1,0 +1,105 @@
+#Projects {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.ProjectsTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.ProjectsBars {
+    margin: 1.5rem;
+    width: 100vw;
+    max-width: 80%;
+    text-align: left;
+}
+
+.ProjectsBar {
+    display: flex;
+    margin: 0.5rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: black;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.ProjectsBarImg {
+    object-fit: cover;
+    height: 10rem;
+    width: 22rem;
+    margin-right: 2.5rem;
+}   
+  
+.ProjectsBar.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.ProjectsBarText>h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+.ProjectsRole {
+    font-weight: 600;
+    color: white;
+}
+
+.ProjectsDescription {
+    font-weight: 200;
+    color: white;
+}
+
+/* Added styles for PNNL-specific elements */
+.abstractInfo {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #cccccc;
+}
+
+.abstractLink {
+    margin-top: 0.5rem;
+}
+
+.abstractLink button {
+    padding: 0.5rem 1rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.abstractLink button:hover {
+    background-color: #357abd;
+}
+
+@media screen and (max-width:720px) {
+    .ProjectsBarText>p {
+        font-size: 3vw;
+    }
+
+    .ProjectsBarImg {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    .ProjectsBarText>h2 {
+        font-size: 5vw;
+    }
+}
