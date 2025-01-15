@@ -85,13 +85,14 @@
 .skillBars {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-  gap: 1.5rem;
+  gap: 3rem; 
   width: 100%;
   max-width: 50%;
   padding: 2rem;
   background-color: #1a1a1a;
   border-radius: 1rem;
   justify-items: center;
+  margin-bottom: 1rem;
 }
 
 .skillBar {

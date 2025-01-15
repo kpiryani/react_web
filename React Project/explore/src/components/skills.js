@@ -10,10 +10,16 @@ import SQLLogo from "../images/sql_logo.png";
 import PyTorchLogo from "../images/pytorch_logo.png";
 import StreamLitLogo from "../images/streamlit_logo.jpg";
 import CelonisLogo from "../images/celonis_logo.jpg";
+import LangchainLogo from "../images/langchain_logo.webp"
+import JunitLogo from "../images/junit5_logo.jpg"
+import JenkinsLogo from "../images/jenkins_logo.jpg"
+import PowerBILogo from "../images/power_bi_logo.png"
+import RestAPILogo from "../images/rest_api.jpg"
+import ChromaLogo from "../images/chroma_logo.png"
+
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faDatabase, faRobot } from '@fortawesome/free-solid-svg-icons';
-
+import { faCode, faDatabase, faRobot} from '@fortawesome/free-solid-svg-icons';
 const Skills = () => {
   const skillsRef = useRef(null);
 
@@ -70,9 +76,8 @@ const Skills = () => {
           </div>
         </div>
       </div>
-
       <span className="skillDesc">
-        Some tools and technologies I specialize in!
+       My Toolbox
       </span>
       <div className="skillBars">
         <div className="skillBar">
@@ -133,6 +138,42 @@ const Skills = () => {
           <img src={CelonisLogo} alt="Celonis" className="skillBarImg" />
           <div className="skillBarText">
             <h2>Celonis</h2>
+          </div>
+        </div>
+        <div className="skillBar">
+          <img src={LangchainLogo} alt="Java" className="skillBarImg" />
+          <div className="skillBarText">
+            <h2>Langchain</h2>
+          </div>
+        </div>
+        <div className="skillBar">
+        <img src={JunitLogo} alt="Java" className="skillBarImg" />
+          <div className="skillBarText">
+            <h2>JUnit</h2>
+          </div>
+        </div>
+        <div className="skillBar">
+        <img src={JenkinsLogo} alt="Java" className="skillBarImg" />
+          <div className="skillBarText">
+            <h2>Jenkins</h2>
+          </div>
+        </div>
+        <div className="skillBar">
+        <img src={PowerBILogo} alt="Java" className="skillBarImg" />
+          <div className="skillBarText">
+            <h2>PowerBI</h2>
+          </div>
+        </div>
+        <div className="skillBar">
+        <img src={ChromaLogo} alt="Java" className="skillBarImg" />
+          <div className="skillBarText">
+            <h2>ChromaDB</h2>
+          </div>
+        </div>
+        <div className="skillBar">
+        <img src={RestAPILogo} alt="Java" className="skillBarImg" />
+          <div className="skillBarText">
+            <h2>REST API</h2>
           </div>
         </div>
       </div>

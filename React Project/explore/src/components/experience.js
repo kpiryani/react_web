@@ -47,7 +47,7 @@ const Experience = () => {
               Check out the abstract for the project I worked on!
             </p>
             <div className="abstractLink">
-              <button onClick={() => window.open('https://www.pnnl.gov/publications/retrieval-augmented-generation-robust-cyber-defense', '_blank')}>
+              <button onClick={() => window.open('https://www.pnnl.gov/publications/retrieval-augmented-generation-robust-cyber-defense', '_blank')} classname="abstractLink">
                 View Abstract
               </button>
             </div>
