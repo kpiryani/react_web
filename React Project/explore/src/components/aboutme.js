@@ -48,9 +48,6 @@ const AboutMe = () => {
         evolving field of neurotechnology. I am particularly passionate about the ethical implications of AI and investigating
         its role in advancing neuromorphic computing to create systems that mimic human intelligence and adaptability.
       </p>
-      <p className="aboutme_description" ref={addToDescriptionRefs}>
-        I am currently seeking internship opportunities for the summer of 2025!
-      </p>
       <img src={bg} alt="Neuro" class="bg" />
     </div>
     
