@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
-import LinkedIn from "../images/linkedin_logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import "./contact.css";
 import emailjs from "@emailjs/browser";
 
@@ -70,11 +71,20 @@ const Contact = () => {
           </button>
           <div className="links">
             <a
-              href="https://www.linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/krish-piryani/"
               target="_blank"
               rel="noopener noreferrer"
+              className="link-item"
             >
-              <img src={LinkedIn} alt="LinkedIn" className="link" />
+              <FontAwesomeIcon icon={faLinkedin} size="3x" className="link-icon" />
+            </a>
+            <a
+              href="https://github.com/kpiryani"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-item"
+            >
+              <FontAwesomeIcon icon={faGithub} size="3x" className="link-icon" />
             </a>
           </div>
         </form>

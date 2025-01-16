@@ -22,7 +22,7 @@ html, body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  opacity: 0.2;
+  opacity: 0.25;
 }
 
 /* New class for the content */
@@ -100,6 +100,8 @@ html, body {
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease;
 }
+
+
 
 
 /* Removed .background class as it's no longer needed */

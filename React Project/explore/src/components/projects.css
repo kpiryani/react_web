@@ -1,4 +1,4 @@
-#experience {
+#Projects {
     overflow: hidden;
     width: 100vw;
     max-width: 65rem;
@@ -10,7 +10,7 @@
     margin: 0 auto;
 }
 
-.experienceTitle {
+.ProjectsTitle {
     font-size: 2rem;
     font-weight: 600;
     padding-top: 1rem;
@@ -18,14 +18,14 @@
     color: white;
 }
 
-.experienceBars {
+.ProjectsBars {
     margin: 1.5rem;
     width: 100vw;
     max-width: 80%;
     text-align: left;
 }
 
-.experienceBar {
+.ProjectsBar {
     display: flex;
     margin: 0.5rem;
     padding: 1.5rem;
@@ -36,30 +36,30 @@
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.experienceBarImg {
+.ProjectsBarImg {
     object-fit: cover;
     height: 10rem;
     width: 22rem;
     margin-right: 2.5rem;
 }   
   
-.experienceBar.show {
+.ProjectsBar.show {
     opacity: 1;
     transform: translateX(0);
 }
 
-.experienceBarText>h2 {
+.ProjectsBarText>h2 {
     font-size: 1.5rem;
     font-weight: 600;
     color: white;
 }
 
-.experienceRole {
+.ProjectsRole {
     font-weight: 600;
     color: white;
 }
 
-.experienceDescription {
+.ProjectsDescription {
     font-weight: 200;
     color: white;
 }
@@ -73,12 +73,12 @@
 
 .abstractLink {
     margin-top: 0.5rem;
-    
 }
 
 .abstractLink button {
     padding: 0.5rem 1rem;
-    background-color: #AE8F00 !important;
+    background-color: #4a90e2;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -86,21 +86,20 @@
 }
 
 .abstractLink button:hover {
-    background-color: rgb(201, 179, 53) !important;
-    color: white;
+    background-color: #357abd;
 }
 
 @media screen and (max-width:720px) {
-    .experienceBarText>p {
+    .ProjectsBarText>p {
         font-size: 3vw;
     }
 
-    .experienceBarImg {
+    .ProjectsBarImg {
         height: 2.25rem;
         width: 2.25rem;
     }
 
-    .experienceBarText>h2 {
+    .ProjectsBarText>h2 {
         font-size: 5vw;
     }
 }

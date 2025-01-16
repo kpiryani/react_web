@@ -47,7 +47,7 @@ const Experience = () => {
               Check out the abstract for the project I worked on!
             </p>
             <div className="abstractLink">
-              <button onClick={() => window.open('https://www.pnnl.gov/publications/retrieval-augmented-generation-robust-cyber-defense', '_blank')}>
+              <button onClick={() => window.open('https://www.pnnl.gov/publications/retrieval-augmented-generation-robust-cyber-defense', '_blank')} classname="abstractLink">
                 View Abstract
               </button>
             </div>
@@ -59,15 +59,24 @@ const Experience = () => {
             <h2>Siemens Healthineers</h2>
             <p className="experienceRole">Data Analytics Intern</p>
             <p className="experienceDescription">
-            Enhanced a RAG-based system by designing one-to-one mappings between MITRE's CVE, CWE, CAPEC, and ATT&CK frameworks with LlamaIndex.
+            Applied process intelligence insights with Celonis and created detailed dashboards in PowerBI to improve resolution speeds for over 90,000 medical instrument issues.
             </p>
           </div>
         </div>
         <div className="experienceBar">
           <img src={AppDesign} alt="" className="experienceBarImg"></img>
           <div className="experienceBarText">
-            <h2>North Carolina State University Undergraduate Research</h2>
+            <h2>NCSU Undergraduate Research</h2>
             <p className="experienceRole">Research Assistant at AI Assisted Learning Lab</p>
+            <p className="experienceDescription">
+            Evaluate a Subtree-based Attention Neural Network (SANN) for debugging student code in Java and C by
+            identifying patterns in abstract syntax trees (ASTs)
+            </p>
+            <div className="abstractLink">
+              <button onClick={() => window.open('https://research.csc.ncsu.edu/aial/home/', '_blank')}>
+                View Lab Website
+              </button>
+            </div>
           </div>
         </div>
         <div className="experienceBar">
@@ -75,6 +84,14 @@ const Experience = () => {
           <div className="experienceBarText">
             <h2>Consult Your Community</h2>
             <p className="experienceRole">Engagement Manager</p>
+            <p className="experienceDescription">
+            Deliver actionable growth strategies and customized technology solutions for minority-owned businesses in Raleigh to expand their market reach
+            </p>
+            <div className="abstractLink">
+              <button onClick={() => window.open('https://www.cycncstate.org/', '_blank')}>
+                View Website
+              </button>
+            </div>
           </div>
         </div>
       </div>

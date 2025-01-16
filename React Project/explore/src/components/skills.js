@@ -10,10 +10,16 @@ import SQLLogo from "../images/sql_logo.png";
 import PyTorchLogo from "../images/pytorch_logo.png";
 import StreamLitLogo from "../images/streamlit_logo.jpg";
 import CelonisLogo from "../images/celonis_logo.jpg";
+import LangchainLogo from "../images/langchain_logo.webp"
+import JunitLogo from "../images/junit5_logo.jpg"
+import JenkinsLogo from "../images/jenkins_logo.jpg"
+import PowerBILogo from "../images/power_bi_logo.png"
+import RestAPILogo from "../images/rest_api.jpg"
+import ChromaLogo from "../images/chroma_logo.png"
+
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faDatabase, faRobot } from '@fortawesome/free-solid-svg-icons';
-
+import { faCode, faDatabase, faRobot} from '@fortawesome/free-solid-svg-icons';
 const Skills = () => {
   const skillsRef = useRef(null);
 
@@ -45,34 +51,33 @@ const Skills = () => {
 
   return (
     <section id="skills" ref={skillsRef}>
-      <span className="skillTitle">My Expertise</span>
+      <span className="skillTitle">My Areas of Expertise</span>
       
       <div className="skills-grid">
         <div className="skill-box">
           <FontAwesomeIcon icon={faCode} size="3x" className="skill-icon"/>
           <div className="skill-content">
-            <h3>Software Development</h3>
+            <h3>Agile Software Development</h3>
             <p>Proficient in Java, Python, and C/C++ for building robust and efficient software solutions.</p>
           </div>
         </div>
         <div className="skill-box">
           <FontAwesomeIcon icon={faRobot} size="3x" className="skill-icon"/>
           <div className="skill-content">
-            <h3>Artificial Intelligence</h3>
-            <p>Experienced in AI research and enhancing/deploying ML models using LlamaIndex, Langchain, and HuggingFace frameworks.</p>
+            <h3>ML Research and Deployment</h3>
+            <p>Experienced in AI/ML research and enhancing/deploying ML models using LlamaIndex, Langchain, and HuggingFace frameworks.</p>
           </div>
         </div>
         <div className="skill-box">
           <FontAwesomeIcon icon={faDatabase} size="3x" className="skill-icon"/>
           <div className="skill-content">
-            <h3>Data Analysis</h3>
+            <h3>Data Mining and Modeling</h3>
             <p>Skilled in data extraction, analysis, and visualization using SQL, MongoDB, and Power BI.</p>
           </div>
         </div>
       </div>
-
       <span className="skillDesc">
-        Some tools and technologies I specialize in!
+       My Toolbox
       </span>
       <div className="skillBars">
         <div className="skillBar">
@@ -133,6 +138,42 @@ const Skills = () => {
           <img src={CelonisLogo} alt="Celonis" className="skillBarImg" />
           <div className="skillBarText">
             <h2>Celonis</h2>
+          </div>
+        </div>
+        <div className="skillBar">
+          <img src={LangchainLogo} alt="Java" className="skillBarImg" />
+          <div className="skillBarText">
+            <h2>Langchain</h2>
+          </div>
+        </div>
+        <div className="skillBar">
+        <img src={JunitLogo} alt="Java" className="skillBarImg" />
+          <div className="skillBarText">
+            <h2>JUnit</h2>
+          </div>
+        </div>
+        <div className="skillBar">
+        <img src={JenkinsLogo} alt="Java" className="skillBarImg" />
+          <div className="skillBarText">
+            <h2>Jenkins</h2>
+          </div>
+        </div>
+        <div className="skillBar">
+        <img src={PowerBILogo} alt="Java" className="skillBarImg" />
+          <div className="skillBarText">
+            <h2>PowerBI</h2>
+          </div>
+        </div>
+        <div className="skillBar">
+        <img src={ChromaLogo} alt="Java" className="skillBarImg" />
+          <div className="skillBarText">
+            <h2>ChromaDB</h2>
+          </div>
+        </div>
+        <div className="skillBar">
+        <img src={RestAPILogo} alt="Java" className="skillBarImg" />
+          <div className="skillBarText">
+            <h2>REST API</h2>
           </div>
         </div>
       </div>
