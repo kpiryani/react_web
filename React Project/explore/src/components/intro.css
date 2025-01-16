@@ -125,8 +125,7 @@
         typing 0s steps(16) 0s forwards;
     animation-fill-mode: forwards;
 
-    /* Neon Effect Added */
-    animation: univneon 3s infinite alternate 6s; /* Faded glow animation with 3s delay */
+    animation: univneon 3s infinite alternate 5s; /* NCSU neon effect*/
     color: red;
 }
 
