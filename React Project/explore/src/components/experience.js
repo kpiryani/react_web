@@ -57,7 +57,7 @@ const Experience = () => {
           <img src={WebDesign} alt="" className="experienceBarImg"></img>
           <div className="experienceBarText">
             <h2>Siemens Healthineers</h2>
-            <p className="experienceRole">Data Analytics Intern</p>
+            <p className="experienceRole">Data Science Intern</p>
             <p className="experienceDescription">
             Applied process intelligence insights with Celonis and created detailed dashboards in PowerBI to improve resolution speeds for over 90,000 medical instrument issues.
             </p>
