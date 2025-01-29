@@ -28,7 +28,7 @@ const Navbar = () => {
           to="intro"
           spy={true}
           smooth={true}
-          offset={-200}
+          offset={-250}
           duration={500}
           className="desktopMenuListItem"
         >
@@ -39,7 +39,7 @@ const Navbar = () => {
           to="skills"
           spy={true}
           smooth={true}
-          offset={0}
+          offset={-125}
           duration={500}
           className="desktopMenuListItem"
         >
@@ -50,7 +50,7 @@ const Navbar = () => {
           to="experienceTitle"
           spy={true}
           smooth={true}
-          offset={0}
+          offset={-125}
           duration={500}
           className="desktopMenuListItem"
         >
@@ -61,7 +61,7 @@ const Navbar = () => {
           to="aboutme_title"
           spy={true}
           smooth={true}
-          offset={-150}
+          offset={-100}
           duration={500}
           className="desktopMenuListItem"
         >

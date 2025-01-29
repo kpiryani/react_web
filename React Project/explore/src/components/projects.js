@@ -55,7 +55,8 @@ const Projects = () => {
           <div className="ProjectsBarText">
             <h2>Chips Challenge</h2>
             <p className="ProjectsDescription">
-            • Developed autonomous functionality for a game called Chips Challenge using AI-based shortest path algorithms. • The goal of Chips challenge is to collect keys across the map to unlock doors to the final destination.
+            • Developed autonomous functionality for a game called Chips Challenge using AI-based shortest path algorithms. <br/> 
+            • The goal of Chips challenge is to collect keys across the map to unlock doors to the final destination.
             </p>
             <p className="abstractInfo">
               Please feel free to reach out if you would like to view my codebase.
