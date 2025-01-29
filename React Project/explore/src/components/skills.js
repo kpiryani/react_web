@@ -76,9 +76,6 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      <span className="skillDesc">
-       My Toolbox
-      </span>
       <div className="skillBars">
         <div className="skillBar">
           <img src={JavaLogo} alt="Java" className="skillBarImg" />

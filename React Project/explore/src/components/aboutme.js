@@ -44,13 +44,12 @@ const AboutMe = () => {
         About Me
       </h1>
       <p className="aboutme_description" ref={addToDescriptionRefs}>
-        As both a dedicated individual and a collaborative team player, I am excited to positively contribute to the rapidly 
-        evolving field of neurotechnology. I am particularly passionate about the ethical implications of AI and investigating
-        its role in advancing neuromorphic computing to create systems that mimic human intelligence and adaptability.
+      As both a dedicated individual and a collaborative team player, I am excited to positively contribute to the rapidly 
+      evolving field of <span className="highlights">neurotechnology</span>. My passion lies in exploring the convergence of <span className="highlights_2">artificial intelligence</span> and <span className="highlights_2">brain-computer interfaces</span> to help people with neurological disorders effortlessly and fully communicate with the world around them. <br/> 
+
+
       </p>
-      <p className="aboutme_description" ref={addToDescriptionRefs}>
-        I am currently seeking internship opportunities for the summer of 2025!
-      </p>
+
       <img src={bg} alt="Neuro" class="bg" />
     </div>
     

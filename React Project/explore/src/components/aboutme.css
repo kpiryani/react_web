@@ -45,3 +45,13 @@
     max-width: 800px;
     line-height: 1.5;
 }
+
+.highlights {
+    font-weight:600;
+    color:magenta;
+}
+
+.highlights_2 {
+    font-weight:300;
+    color:magenta;
+}
