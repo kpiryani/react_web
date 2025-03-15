@@ -1,5 +1,5 @@
 import "./navbar.css";
-import logo from "../images/k.jpg";
+import logo from "../images/k_logo.png";
 import { Link } from "react-scroll";
 import contactImg from "../images/black email logo.jpg";
 import menu from "../images/menu.jpg";
