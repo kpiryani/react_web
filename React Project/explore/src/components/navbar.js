@@ -101,7 +101,7 @@ const Navbar = () => {
         </Link>
         <Link
           activeClass="active"
-          to="aboutme"
+          to="skills"
           spy={true}
           smooth={true}
           offset={-150} 
@@ -109,9 +109,9 @@ const Navbar = () => {
           className="listItem"
           onClick={() => setShowMenu(false)}
         >
-          About Me
-        </Link>
-        <Link
+          Skills
+          </Link>
+          <Link
           activeClass="active"
           to="experience"
           spy={true}
@@ -125,7 +125,7 @@ const Navbar = () => {
         </Link>
         <Link
           activeClass="active"
-          to="skills"
+          to="aboutme_title"
           spy={true}
           smooth={true}
           offset={-150} 
@@ -133,7 +133,7 @@ const Navbar = () => {
           className="listItem"
           onClick={() => setShowMenu(false)}
         >
-          Skills
+          About Me
         </Link>
         <Link
           activeClass="active"
