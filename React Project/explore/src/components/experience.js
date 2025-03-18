@@ -34,12 +34,11 @@ const Experience = () => {
     <section id="experience" ref={experienceRef}>
       <span className="experienceTitle"> My Internship Experience</span>
       <div className="experienceBars">
-        {/* Modified PNNL experience to match other experiences */}
         <div className="experienceBar">
           <img src={UIDesign} alt="" className="experienceBarImg"></img>
           <div className="experienceBarText">
             <h2>Pacific Northwest National Laboratory</h2>
-            <p className="experienceRole">AI Research Intern</p>
+            <p className="experienceRole">AI/ML Intern</p>
             <p className="experienceDescription">
             Enhanced a RAG-based system by designing one-to-one mappings between MITRE's CVE, CWE, CAPEC, and ATT&CK frameworks with LlamaIndex.
             </p>
@@ -48,7 +47,7 @@ const Experience = () => {
             </p>
             <div className="abstractLink">
               <button onClick={() => window.open('https://www.pnnl.gov/publications/retrieval-augmented-generation-robust-cyber-defense', '_blank')} classname="abstractLink">
-                View Abstract
+                View Publication
               </button>
             </div>
           </div>
@@ -66,8 +65,8 @@ const Experience = () => {
         <div className="experienceBar">
           <img src={AppDesign} alt="" className="experienceBarImg"></img>
           <div className="experienceBarText">
-            <h2>NCSU Undergraduate Research</h2>
-            <p className="experienceRole">Research Assistant at AI Assisted Learning Lab</p>
+            <h2>NCSU AI Assisted Learning Lab</h2>
+            <p className="experienceRole">Machine Learning Researcher</p>
             <p className="experienceDescription">
             Evaluate a Subtree-based Attention Neural Network (SANN) for debugging student code in Java and C by
             identifying patterns in abstract syntax trees (ASTs)

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./intro.css";
-import bg from "../images/krish face zoo.jpg";
+import bg from "../images/krish_sf.jpg";
 import btnImg from "../images/linkedin_logo.png";
 import gitImg from "../images/github_logo.png";
 
