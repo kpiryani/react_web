@@ -38,7 +38,7 @@ const Experience = () => {
           <img src={UIDesign} alt="" className="experienceBarImg"></img>
           <div className="experienceBarText">
             <h2>Pacific Northwest National Laboratory</h2>
-            <p className="experienceRole">AI/ML Intern</p>
+            <p className="experienceRole">AI Software Engineer Intern</p>
             <p className="experienceDescription">
             Enhanced a RAG-based system by designing one-to-one mappings between MITRE's CVE, CWE, CAPEC, and ATT&CK frameworks with LlamaIndex.
             </p>
@@ -69,7 +69,7 @@ const Experience = () => {
             <p className="experienceRole">Machine Learning Researcher</p>
             <p className="experienceDescription">
             Evaluate a Subtree-based Attention Neural Network (SANN) for debugging student code in Java and C by
-            identifying patterns in abstract syntax trees (ASTs)
+            identifying patterns in abstract syntax trees (ASTs).
             </p>
             <div className="abstractLink">
               <button onClick={() => window.open('https://research.csc.ncsu.edu/aial/home/', '_blank')}>
@@ -82,9 +82,9 @@ const Experience = () => {
           <img src={CycLogo} alt="" className="experienceBarImg"></img>
           <div className="experienceBarText">
             <h2>Consult Your Community</h2>
-            <p className="experienceRole">Engagement Manager</p>
+            <p className="experienceRole">Lead Business Analyst</p>
             <p className="experienceDescription">
-            Deliver actionable growth strategies and customized technology solutions for minority-owned businesses in Raleigh to expand their market reach
+            Deliver actionable growth strategies and customized technology solutions for minority-owned small businesses in Raleigh to expand their market reach.
             </p>
             <div className="abstractLink">
               <button onClick={() => window.open('https://www.cycncstate.org/', '_blank')}>

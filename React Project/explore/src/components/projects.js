@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./projects.css";
 import StudyAId from "../images/studyaid.png";
 import ChipsChallenge from "../images/chips_challenge.png";
+import Snapbot from "../images/snap_chatbot_interface.png"
 
 const Projects = () => {
   const ProjectsRef = useRef(null);
@@ -38,7 +39,7 @@ const Projects = () => {
           <div className="ProjectsBarText">
             <h2>StudyAId</h2>
             <p className="ProjectsDescription">
-            • Pioneered a team of 4 to build an AI tool that processes PDFs and verbally responds to user queries at HackNC23 <br />
+            • Pioneered a team of four to build an AI tool that processes PDFs and verbally responds to user queries at HackNC23 <br />
 • Designed the UX/UI using Python and Streamlit to provide seamless user interaction <br />
 • Integrated Langchain for advanced sequential text interpretation and HuggingFace to host the NLP model <br />
 
@@ -58,8 +59,14 @@ const Projects = () => {
             • Developed autonomous functionality for a game called Chips Challenge using AI-based shortest path algorithms. <br/> 
             • The goal of Chips challenge is to collect keys across the map to unlock doors to the final destination.
             </p>
-            <p className="abstractInfo">
-              Please feel free to reach out if you would like to view my codebase.
+          </div>
+        </div>
+        <div className="ProjectsBar">
+          <img src={Snapbot} alt="" className="ProjectsBarImg"></img>
+          <div className="ProjectsBarText">
+            <h2>Snapbot</h2>
+            <p className="ProjectsDescription">
+            • Created an LLM chatbot with a team of four engineers to aid K-12 students with block-based programming in Snap! <br/> 
             </p>
           </div>
         </div>
