@@ -4,6 +4,7 @@ import UIDesign from "../images/pnnl.png";
 import WebDesign from "../images/siemens healthineers.jpg";
 import AppDesign from "../images/ncsu_research.png";
 import CycLogo from "../images/cyc_logo.png";
+import CiscoLogo from "../images/cisco_logo.png";
 
 const Experience = () => {
   const experienceRef = useRef(null);
@@ -34,6 +35,17 @@ const Experience = () => {
     <section id="experience" ref={experienceRef}>
       <span className="experienceTitle"> My Internship Experience</span>
       <div className="experienceBars">
+        <div className="experienceBar">
+          <img src={CiscoLogo} alt="" className="CiscoImg"></img>
+          <div className="experienceBarText">
+            <h2>Cisco Systems</h2>
+            <p className="experienceRole">Software Engineer Intern</p>
+            <p className="experienceDescription">
+            Developed a REST API visualization for testing internal employee API keys and built a metrics dashboard to evaluate usage of Cisco’s Sales AI Assistant.
+            </p>
+            
+          </div>
+        </div>
         <div className="experienceBar">
           <img src={UIDesign} alt="" className="experienceBarImg"></img>
           <div className="experienceBarText">
