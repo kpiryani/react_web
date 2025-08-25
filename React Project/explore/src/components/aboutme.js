@@ -53,4 +53,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-//UNTILIZED AI FOR FADE IN FORMATTING

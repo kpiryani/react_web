@@ -1,9 +1,10 @@
 import "./navbar.css";
 import logo from "../images/k_logo.png";
 import { Link } from "react-scroll";
-import contactImg from "../images/black email logo.jpg";
 import menu from "../images/menu.jpg";
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faTelegram} from "@fortawesome/free-brands-svg-icons";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false); 
@@ -77,7 +78,8 @@ const Navbar = () => {
             .scrollIntoView({ behavior: "smooth" });
         }}
       >
-        <img src={contactImg} alt="" className="desktopMenuImg" /> Contact Me
+        <FontAwesomeIcon icon={faTelegram} alt="" className="desktopMenuImg" /> Contact Me
+        
       </button>
       <img
         src={menu}

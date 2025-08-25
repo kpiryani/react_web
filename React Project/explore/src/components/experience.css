@@ -27,6 +27,7 @@
 
 .experienceBar {
     display: flex;
+    align-items: flex-start;
     margin: 0.5rem;
     padding: 1.5rem;
     border-radius: 0.5rem;
@@ -37,15 +38,32 @@
 }
 
 .experienceBarImg {
-    object-fit: cover;
-    height: 10rem;
-    width: 22rem;
+    object-fit: contain; 
+    height: 9rem;    
+    width: 15rem;    
     margin-right: 2.5rem;
-}   
+    flex-shrink: 0;  
+}
+
+.CiscoImg {
+    object-fit: contain; 
+    height: 5rem;     
+    width: 15rem; 
+    margin-right: 2.5rem;
+    flex-shrink: 0;  
+}
+
   
 .experienceBar.show {
     opacity: 1;
     transform: translateX(0);
+}
+
+.experienceBarText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px;
 }
 
 .experienceBarText>h2 {
@@ -57,11 +75,14 @@
 .experienceRole {
     font-weight: 600;
     color: white;
+    margin-bottom: 8px;
 }
 
 .experienceDescription {
     font-weight: 200;
     color: white;
+    flex-grow: 1;
+    margin-bottom: 10px;
 }
 
 /* Added styles for PNNL-specific elements */
@@ -72,8 +93,7 @@
 }
 
 .abstractLink {
-    margin-top: 0.5rem;
-    
+    margin-top: auto;
 }
 
 .abstractLink button {
@@ -89,6 +109,7 @@
     background-color: rgb(201, 179, 53) !important;
     color: white;
 }
+
 
 @media screen and (max-width:720px) {
     .experienceBarText>p {
