@@ -121,6 +121,11 @@
         width: 2.25rem;
     }
 
+    .CiscoImg {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
     .experienceBarText>h2 {
         font-size: 5vw;
     }
