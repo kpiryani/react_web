@@ -7,7 +7,7 @@ import ReactLogo from "../images/react_logo.png";
 import HuggingLogo from "../images/huggingface_logo.png";
 import CLogo from "../images/c++_logo.jpg";
 import SQLLogo from "../images/sql_logo.png";
-import PyTorchLogo from "../images/pytorch_logo.png";
+// import PyTorchLogo from "../images/pytorch_logo.png";
 import StreamLitLogo from "../images/streamlit_logo.jpg";
 import CelonisLogo from "../images/celonis_logo.jpg";
 import LangchainLogo from "../images/langchain_logo.webp"
@@ -16,6 +16,7 @@ import JenkinsLogo from "../images/jenkins_logo.jpg"
 import PowerBILogo from "../images/power_bi_logo.png"
 import RestAPILogo from "../images/rest_api.jpg"
 import ChromaLogo from "../images/chroma_logo.png"
+import BigQueryLogo from "../images/bigquery_logo.jpeg"
 
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -58,21 +59,21 @@ const Skills = () => {
           <FontAwesomeIcon icon={faCode} size="3x" className="skill-icon"/>
           <div className="skill-content">
             <h3>Agile Software Development</h3>
-            <p>Proficient in Java, Python, and C/C++ for building robust and efficient software solutions.</p>
+            <p>Proficient in Java, Python, and C/C++ for building robust and efficient software solutions at scale.</p>
           </div>
         </div>
         <div className="skill-box">
           <FontAwesomeIcon icon={faRobot} size="3x" className="skill-icon"/>
           <div className="skill-content">
             <h3>ML Research and Deployment</h3>
-            <p>Experienced in AI/ML research and enhancing/deploying ML models using LlamaIndex, Langchain, and HuggingFace frameworks.</p>
+            <p>Experienced in AI research and enhancing/deploying ML models using LlamaIndex, Langchain, and HuggingFace frameworks.</p>
           </div>
         </div>
         <div className="skill-box">
           <FontAwesomeIcon icon={faDatabase} size="3x" className="skill-icon"/>
           <div className="skill-content">
             <h3>Data Mining and Modeling</h3>
-            <p>Skilled in data extraction, analysis, and visualization using SQL, MongoDB, and Power BI.</p>
+            <p>Skilled in data extraction, analysis, and visualization using SQL, MongoDB, and Google BigQuery.</p>
           </div>
         </div>
       </div>
@@ -120,9 +121,9 @@ const Skills = () => {
           </div>
         </div>
         <div className="skillBar">
-          <img src={PyTorchLogo} alt="PyTorch" className="skillBarImg" />
+          <img src={BigQueryLogo} alt="Bigquery" className="skillBarImg" />
           <div className="skillBarText">
-            <h2>PyTorch</h2>
+            <h2>Google BigQuery</h2>
           </div>
         </div>
         <div className="skillBar">

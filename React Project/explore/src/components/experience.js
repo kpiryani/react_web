@@ -33,7 +33,7 @@ const Experience = () => {
 
   return (
     <section id="experience" ref={experienceRef}>
-      <span className="experienceTitle"> My Internship Experience</span>
+      <span className="experienceTitle"> My Work Experience</span>
       <div className="experienceBars">
         <div className="experienceBar">
           <img src={CiscoLogo} alt="" className="CiscoImg"></img>

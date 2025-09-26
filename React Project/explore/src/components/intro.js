@@ -24,7 +24,7 @@ const Intro = () => {
           I'm <span className="IntroName">Krish Piryani</span> <br />{" "}
         </span>
         <span className="role">
-          And I am a junior at
+          And I am a senior at
           <br /> <span className="IntroUniv">NC State University</span>
         </span>
         <p className="introPara"> * B. S. Computer Science</p>
