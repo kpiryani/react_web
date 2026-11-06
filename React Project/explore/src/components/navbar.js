@@ -71,15 +71,18 @@ const Navbar = () => {
       </div>
 
       <button
+        type="button"
         className="desktopMenuBtn"
+        aria-label="Jump to the contact form"
+        title="Send me a message"
         onClick={() => {
           document
             .getElementById("contact")
             .scrollIntoView({ behavior: "smooth" });
         }}
       >
-        <FontAwesomeIcon icon={faTelegram} alt="" className="desktopMenuImg" /> Contact Me
-        
+        <FontAwesomeIcon icon={faTelegram} aria-hidden="true" className="desktopMenuImg" />
+        <span>Contact Me</span>
       </button>
       <img
         src={menu}

@@ -83,64 +83,153 @@
     animation: cursorDisappear 0s 2s forwards;
 }
 
-/* Neon Effect Applied to Name */
-.IntroName {
+/*
+ * Neon effects.
+ * Animating a stack of large text-shadows forces the browser to repaint the
+ * glow every frame, which is what made the name lag. Instead the glow is
+ * painted ONCE on a copy of the text (::after, fed by data-text), and only
+ * that layer's opacity is animated. Opacity runs on the GPU compositor, so it
+ * stays smooth. Timing (3s, alternate, 3s delay) is unchanged.
+ */
+.IntroName,
+.IntroUniv {
+    position: relative;
+    display: inline-block;
     white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: 
-        typing 0s steps(16) 0s forwards,
-        cursorBlink 0.0s step-end 0s;
-    animation-fill-mode: forwards;
+}
 
-    /* Neon Effect Added */
-    animation: flicker 3s infinite alternate 3s; /* Faded glow animation with 3s delay */
+.IntroName {
     color: white;
 }
 
-/* Flickering animation for neon text effect */
+.IntroName::after,
+.IntroUniv::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    will-change: opacity;
+    opacity: 0;
+}
+
+.IntroName::after {
+    color: white;
+    text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(247, 0, 255),
+        0 0 80px rgb(247, 0, 255),
+        0 0 100px rgb(247, 0, 255),
+        0 0 150px rgb(247, 0, 255);
+    animation: flicker 3s infinite alternate 3s;
+}
+
+/* Same on/off beats as before, just driving opacity instead of text-shadow */
 @keyframes flicker {
-    0%, 18%, 20%, 22%, 25%, 53%, 54%, 55%, 59%, 98%, 99%, 100% {
-        text-shadow:
-            0 0 4px #fff,
-            0 0 11px #fff,
-            0 0 19px #fff,
-            0 0 40px rgb(247, 0, 255),
-            0 0 80px rgb(247, 0, 255),
-            0 0 90px rgb(247, 0, 255),
-            0 0 100px rgb(247, 0, 255),
-            0 0 150px rgb(247, 0, 255);
-    }
-    20%, 23%, 55% {        
-        text-shadow: none;
-    }    
+    0%, 18%, 22%, 25%, 53%, 54%, 59%, 98%, 99%, 100% { opacity: 1; }
+    20%, 23%, 55% { opacity: 0; }
 }
 
 .IntroUniv {
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: 
-        typing 0s steps(16) 0s forwards;
-    animation-fill-mode: forwards;
-
-    animation: univneon 3s infinite alternate 5s; /* NCSU neon effect*/
     color: red;
 }
 
+.IntroUniv::after {
+    color: red;
+    text-shadow:
+        0 0 2px rgb(255, 255, 255),
+        0 0 6px rgb(255, 0, 0),
+        0 0 20px rgb(255, 0, 0);
+    animation: univneon 3s infinite alternate 5s;
+}
+
 @keyframes univneon {
-    50% {        
-        text-shadow:
-            0 0 2px rgba(255, 255, 255),
-            0 0 6px rgba(255, 0, 0),
-            0 0 20px rgba(255, 0, 0);
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 1; }
+}
+
+/* ---------- Scroll exit transition (intro → skills/experience) ----------
+ * --exit goes 0 → 1 as you scroll the first screen away (set in intro.js).
+ * Text drifts up and fades, the photo sinks and shrinks slightly: a parallax
+ * "split" that hands off to the next section. Transform/opacity only. */
+#intro {
+    --exit: 0;
+    position: relative;
+}
+
+.introContent {
+    transform: translate3d(0, calc(var(--exit) * -90px), 0);
+    opacity: calc(1 - var(--exit) * 1.15);
+    will-change: transform, opacity;
+}
+
+.bg {
+    transform: translate3d(0, calc(var(--exit) * 70px), 0) scale(calc(1 - var(--exit) * 0.08));
+    opacity: calc(1 - var(--exit) * 0.9);
+    will-change: transform, opacity;
+}
+
+.scrollCue {
+    position: absolute;
+    left: 50%;
+    bottom: 1.5rem;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: calc(1 - var(--exit) * 4);
+    transition: color 0.2s ease;
+}
+
+.scrollCue:hover {
+    color: white;
+}
+
+.scrollCueMouse {
+    width: 22px;
+    height: 34px;
+    border: 2px solid currentColor;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+}
+
+.scrollCueWheel {
+    width: 3px;
+    height: 7px;
+    border-radius: 2px;
+    background: magenta;
+    animation: scrollWheel 1.6s ease-in-out infinite;
+}
+
+@keyframes scrollWheel {
+    0% { transform: translateY(0); opacity: 1; }
+    70% { transform: translateY(10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 0; }
+}
+
+/* leave room for the fixed side rails (siderails.css) on wide screens */
+@media screen and (min-width: 1200px) {
+    #intro {
+        padding: 0 6rem;
     }
-    0%, 100% {        
-        text-shadow:
-            0 0 1px rgba(255, 255, 255, 0.1),
-            0 0 3px rgba(255, 0, 0, 0.1),
-            0 0 5px rgba(255, 0, 0, 0.05);
-    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .introContent, .bg { transform: none; }
+    .scrollCueWheel { animation: none; }
+}
+
+@media screen and (max-height: 640px), screen and (max-width: 720px) {
+    .scrollCue { display: none; }
 }
 
 .role {

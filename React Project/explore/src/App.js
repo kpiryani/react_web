@@ -7,6 +7,7 @@ import Footer from "./components/footer";
 import AboutMe from "./components/aboutme"
 import Skills from "./components/skills"
 import Projects from "./components/projects"
+import SideRails from "./components/siderails"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           </div>
         </div>
         {/* Kept the original content structure */}
+        <SideRails />
         <div className="content">
           <Navbar />
           <Intro />

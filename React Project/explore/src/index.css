@@ -14,9 +14,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hideen;
-  overflow-y: scroll
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 
+/* Keep section headings clear of the sticky navbar when jumping to them */
+section, #contact, .aboutme_title {
+  scroll-margin-top: 6rem;
 }
 
 code {
