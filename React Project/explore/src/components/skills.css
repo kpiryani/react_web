@@ -87,7 +87,7 @@
   grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   gap: 3rem; 
   width: 100%;
-  max-width: 50%;
+  max-width: min(64rem, 78%);
   padding: 2rem;
   background-color: #1a1a1a;
   border-radius: 1rem;
@@ -124,6 +124,55 @@
   font-weight: 600;
   color: white;
   text-align: center;
+}
+
+/* ---------- Hover focus ----------
+ * The hovered skill lifts slightly and gets a soft glow; its neighbours
+ * dim a touch so your eye lands on the one you're pointing at. */
+.skill-box,
+.skillBar {
+  transition: opacity 0.5s ease, transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.35s ease, background-color 0.35s ease;
+}
+
+.skill-box.show:hover {
+  transform: translateY(-6px) scale(1.03);
+  background-color: #0b0b0b;
+  box-shadow: 0 10px 28px rgba(174, 143, 0, 0.25), 0 0 0 1px rgba(174, 143, 0, 0.45);
+}
+
+.skill-icon {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.35s ease;
+}
+
+.skill-box.show:hover .skill-icon {
+  transform: scale(1.1);
+  color: #AE8F00;
+}
+
+.skillBar.show:hover {
+  transform: translateY(-6px) scale(1.08);
+}
+
+.skillBarImg {
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.skillBar.show:hover .skillBarImg {
+  border-color: #AE8F00;
+  box-shadow: 0 8px 22px rgba(174, 143, 0, 0.35);
+}
+
+@media (hover: hover) {
+  .skills-grid:has(.skill-box:hover) .skill-box.show:not(:hover),
+  .skillBars:has(.skillBar:hover) .skillBar.show:not(:hover) {
+    opacity: 0.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-box.show:hover,
+  .skillBar.show:hover { transform: none; }
 }
 
 @media screen and (max-width: 720px) {
